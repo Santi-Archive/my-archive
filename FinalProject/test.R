@@ -74,3 +74,53 @@ france_score_attack_zone6 <- total_france_score %>%
   filter(score_type == "attack_zone6" & !is.na(n)) %>%
   pull(n)
 # Variable contains the right amount of attack_zone6
+
+france_score_block_zone2 <- total_france_score %>%
+  filter(score_type == "block_zone2" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of block_zone2
+
+france_score_block_zone3 <- total_france_score %>%
+  filter(score_type == "block_zone3" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of block_zone3
+
+france_score_block_zone4 <- total_france_score %>%
+  filter(score_type == "block_zone4" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of block_zone4
+
+france_score_serve_error <- total_france_score %>%
+  filter(score_type == "serve_error" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of serve_error
+
+france_score_error_zone1 <- total_france_score %>%
+  filter(score_type == "error_zone1" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of error_zone1
+
+france_score_error_zone2 <- total_france_score %>%
+  filter(score_type == "error_zone2" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of error_zone2
+
+france_score_error_zone3 <- total_france_score %>%
+  filter(score_type == "error_zone3" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of error_zone3
+
+france_score_error_zone4 <- total_france_score %>%
+  filter(score_type == "error_zone4" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of error_zone4
+
+france_score_error_zone5 <- total_france_score %>%
+  filter(score_type == "error_zone5" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of error_zone5
+
+france_score_error_zone6 <- total_france_score %>%
+  filter(score_type == "error_zone6" & !is.na(n)) %>%
+  pull(n)
+# Variable contains the right amount of error_zone6
