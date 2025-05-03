@@ -1,0 +1,21 @@
+To-Do
+
+1. Total amount of points scored by France from all the games
+2. Total amount of sets played by France from all the games
+3. Total amount of points conceded by France from all the games
+
+1.1 Distribution of points scored by France (attacks, blocks, service aces, and opponent errors)
+1.1.1 Distribution of points scored by France with their attacks (zones)
+1.1.2 Distribution of points scored by France with their blocks (zones)
+1.1.3 Distribution of points scored by France from opposition error (types of errors)
+
+
+2.1 Points differential for each set when France won the set
+2.2 Points differential for each set when France lost the set
+2.3 France sets win ratio
+
+3.1 Distribution of total points conceded by France (opposition attacks, opposition blocks, opposition service aces, team errors)
+3.1.1 Distribution of points scored by opponents with their attacks (zone)
+3.1.2 Distribution of points scored by opponents with their blocks (zone)
+3.1.3 Distribution of points scored by opponents from team errors (types of errors)
+
