@@ -1,6 +1,7 @@
 library(readr)
 library(dplyr)
 library(purrr)
+library(tidyr)
 
 data1 <- read_csv("FinalProject/France/2024_VNL_BUL_vs_FRA.csv")
 data2 <- read_csv("FinalProject/France/2024_VNL_SLO_vs_FRA.csv")
@@ -17,14 +18,13 @@ opponent_all_score <- combined_data %>%
     filter(scoring_team != "France") %>% #nolint
     count(score_type, sort = TRUE)
 
-
-# Wide format for France scores
 france_scores <- france_all_score %>%
   tidyr::pivot_wider(names_from = score_type, values_from = n, values_fill = 0)
 
-# Wide format for Opponent scores
 opponent_scores <- opponent_all_score %>%
   tidyr::pivot_wider(names_from = score_type, values_from = n, values_fill = 0)
 
+# france_scores$serve_ace
+# opponent_scores$attack_zone3
 
-print(france_scores$serve_ace)
+
