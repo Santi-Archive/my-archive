@@ -146,3 +146,77 @@ opponent_france_error_data$label <- opponent_france_error_data$count
 opp_error_distribution <- ggplot(opponent_france_error_data, aes(x = "", y = count, fill = category)) + #nolint
     geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
 ggsave("plot_opp_error.png", plot = opp_error_distribution, width = 6, height = 4, dpi = 300) #nolint
+
+
+
+# Top Scorer Breakdown
+france_total_points <- combined_data %>%
+  filter(scoring_team == "France", !is.na(player_score)) %>%
+  count(player_score, name = "points") %>%
+  mutate(percentage = round(100 * points / sum(points), 1))
+
+bar_plot <- ggplot(france_total_points, aes(x = reorder(player_score, -percentage), y = percentage, fill = player_score)) + #nolint
+  geom_col() +
+  geom_text(aes(label = paste0(percentage, "%")), vjust = -0.5, size = 3) +
+  labs(
+    title = "Total Points Contribution by France Players",
+    x = "Player",
+    y = "Percentage of Team's Total Points",
+    fill = "Player"
+  ) +
+  theme_minimal()
+
+ggsave("france_player_total_points_bar.png", plot = bar_plot, width = 10, height = 6, dpi = 300, bg = "white") #nolint
+
+# Score Breakdown Per Zone
+attack_data <- combined_data %>% filter(scoring_team == "France", grepl("attack_zone", score_type)) #nolint
+
+zone_player_counts <- attack_data %>% group_by(score_type, player_score) %>% summarise(points = n(), .groups = "drop") #nolint
+
+zone_distribution <- zone_player_counts %>% group_by(score_type) %>% mutate(percentage = points / sum(points) * 100) #nolint
+
+zone_plot <- ggplot(zone_distribution, aes(x = score_type, y = percentage, fill = player_score)) + #nolint
+  geom_col(position = "stack") +
+  geom_text(aes(label = paste0(round(percentage, 1), "%")), 
+            position = position_stack(vjust = 0.5), 
+            color = "white", size = 3) +
+  labs(title = "Zone-wise Scoring Breakdown by Player (France)",
+       x = "Attack Zone",
+       y = "Percentage of Points",
+       fill = "Player") +
+  theme_minimal()
+
+# Save with white background
+ggsave("zone_player_distribution_labeled.png", plot = zone_plot, 
+       width = 10, height = 6, dpi = 300, bg = "white")
+
+
+france_data <- combined_data %>%
+  filter(scoring_team == "France")
+
+last_5_points_france <- france_data %>%
+  group_by(match_id, set) %>%
+  arrange(set, rally_number) %>%
+  mutate(point_position = n() - row_number() + 1) %>%
+  filter(point_position <= 5)
+
+head(last_5_points_france)
+
+score_type_analysis <- last_5_points_france %>%
+  count(score_type) %>%
+  arrange(desc(n))
+
+print(score_type_analysis)
+
+ggplot(score_type_analysis, aes(x = reorder(score_type, -n), y = n, fill = score_type)) + #nolint
+  geom_col() +
+  geom_text(aes(label = n), vjust = -0.5, size = 3) +
+  labs(
+    title = "Score Type Breakdown for France's Last 5 Points of Each Set",
+    x = "Score Type",
+    y = "Frequency of Score Type",
+    fill = "Score Type"
+  ) +
+  theme_minimal()
+
+ggsave("france_last_5_points_score_type_analysis.png", width = 8, height = 6, dpi = 300, bg = "white") #nolint
