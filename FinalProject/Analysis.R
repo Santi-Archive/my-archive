@@ -2,6 +2,7 @@ library(readr)
 library(dplyr)
 library(purrr)
 library(tidyr)
+library(ggplot2)
 
 data1 <- read_csv("FinalProject/France/2024_VNL_BUL_vs_FRA.csv")
 data2 <- read_csv("FinalProject/France/2024_VNL_SLO_vs_FRA.csv")
@@ -24,7 +25,124 @@ france_scores <- france_all_score %>%
 opponent_scores <- opponent_all_score %>%
   tidyr::pivot_wider(names_from = score_type, values_from = n, values_fill = 0)
 
-# france_scores$serve_ace
-# opponent_scores$attack_zone3
+france_zonedistribution_data <- data.frame(
+    category = c("Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 6"), #nolint
+    count = c(france_scores$attack_zone1, france_scores$attack_zone2,
+            france_scores$attack_zone3, france_scores$attack_zone4, #nolint
+            france_scores$attack_zone6)
+)
+france_zonedistribution_data$label <- france_zonedistribution_data$count
+# Distribution of France attack in zone 1 to 6
+france_zone_distribution <- ggplot(france_zonedistribution_data, aes(x = "", y = count, fill = category)) + #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+
+ggsave("plot_zone.png", plot = france_zone_distribution, width = 6, height = 4, dpi = 300) #nolint
 
 
+france_blockdistribution_data <- data.frame(
+    category = c("Zone 2", "Zone 3", "Zone 4"), #nolint
+    count = c(france_scores$block_zone2, france_scores$block_zone3,
+            france_scores$block_zone4) #nolint
+)
+france_blockdistribution_data$label <- france_blockdistribution_data$count
+# Distribution of France block in zone 2 to 4
+france_block_distribution <- ggplot(france_blockdistribution_data, aes(x = "", y = count, fill = category)) + #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+
+ggsave("plot_block.png", plot = france_block_distribution, width = 6, height = 4, dpi = 300) #nolint
+
+
+
+total_attacks_france <- france_scores$attack_zone1 + france_scores$attack_zone2 + france_scores$attack_zone3 + #nolint
+                        france_scores$attack_zone4 + france_scores$attack_zone6 #nolint
+total_blocks_france <-  france_scores$block_zone2 + france_scores$block_zone3 + france_scores$block_zone4 #nolint
+total_serve_ace_france <- france_scores$serve_ace
+total_serve_error_france <- france_scores$serve_error
+total_opponent_error_france <-  france_scores$error_zone1 + france_scores$error_zone2 + france_scores$error_zone3 + #nolint
+                                france_scores$error_zone4 + france_scores$error_zone5 + france_scores$error_zone6 #nolint
+total_other_error_france <- france_scores$error_net_touch + france_scores$error_double_touch + france_scores$error_foot_fault + #nolint
+                            france_scores$error_illegal_attack #nolint
+
+# Distribution of all points scored by France
+france_total_distribution_data <- data.frame(
+    category = c("Attacks", "Blocks", "Service Ace", "Opponent Service Error", "Opponent Attack Error", "Other Opponent Error"), #nolint
+    count = c(total_attacks_france, total_blocks_france, total_serve_ace_france, total_serve_error_france, #nolint
+            total_opponent_error_france, total_other_error_france) #nolint
+)
+france_total_distribution_data$label <- france_total_distribution_data$count
+
+france_total_points <- ggplot(france_total_distribution_data, aes(x = "", y = count, fill = category)) + #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+ggsave("plot_total_france.png", plot = france_total_points, width = 6, height = 4, dpi = 300) #nolint
+
+
+
+france_opponent_error_data <- data.frame(
+    category = c("Error Zone 1", "Error Zone 2", "Error Zone 3", "Error Zone 4", #nolint
+                "Error Zone 5", "Error Zone 6", "Service Error", "Error Net Touch", #nolint
+                "Error Double Touch", "Error Foot Fault", "Error Illegal Attack"), #nolint
+    count = c(france_scores$error_zone1, france_scores$error_zone2, france_scores$error_zone3, #nolint
+            france_scores$error_zone4, france_scores$error_zone5, france_scores$error_zone6, #nolint
+            france_scores$serve_error, france_scores$error_net_touch, france_scores$error_double_touch, #nolint
+            france_scores$error_foot_fault, france_scores$error_illegal_attack)
+)
+france_opponent_error_data$label <- france_opponent_error_data$count
+
+france_opponent_error <- ggplot(france_opponent_error_data, aes(x = "", y = count, fill = category)) + #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+ggsave("plot_total_error.png", plot = france_opponent_error, width = 6, height = 4, dpi = 300) #nolint
+
+
+conceded_attacks_france <-  opponent_scores$attack_zone1 + opponent_scores$attack_zone2 + opponent_scores$attack_zone3 + #nolint
+                            opponent_scores$attack_zone4 + opponent_scores$attack_zone6 #nolint
+conceded_blocks_france <-   opponent_scores$block_zone2 + opponent_scores$block_zone3 + opponent_scores$block_zone4 #nolint
+conceded_serve_ace_france <- opponent_scores$serve_ace
+conceded_serve_error_france <- opponent_scores$serve_error
+conceded_opponent_error_france <- opponent_scores$error_zone1 + opponent_scores$error_zone2 + opponent_scores$error_zone3 + #nolint
+                                opponent_scores$error_zone4 + opponent_scores$error_zone6 #nolint
+conceded_other_errors_france <- opponent_scores$error_net_touch + opponent_scores$error_receive #nolint
+
+opp_total_distribution_data <- data.frame(
+    category = c("Attacks", "Blocks", "Service Ace", "Opponent Service Error", "Opponent Attack Error", "Other Opponent Error"), #nolint
+    count = c(conceded_attacks_france, conceded_blocks_france, conceded_serve_ace_france, conceded_serve_error_france, conceded_opponent_error_france, conceded_other_errors_france) #nolint
+)
+opp_total_distribution_data$label <- opp_total_distribution_data$count
+
+opp_total_distribution <- ggplot(opp_total_distribution_data, aes(x = "", y = count, fill = category)) + #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+ggsave("plot_total_opponent.png", plot = opp_total_distribution, width = 6, height = 4, dpi = 300) #nolint
+
+
+opp_zonedistribution_data <- data.frame(
+    category = c("Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6"), #nolint
+    count = c(opponent_scores$attack_zone1, opponent_scores$attack_zone2, opponent_scores$attack_zone3, #nolint
+            opponent_scores$attack_zone4, opponent_scores$attack_zone5, opponent_scores$attack_zone6) #nolint
+)
+opp_zonedistribution_data$label <- opp_zonedistribution_data$count
+
+opp_zone_distribution <- ggplot(opp_zonedistribution_data, aes(x = "", y = count, fill = category)) + #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+ggsave("plot_opp_zone.png", plot = opp_zone_distribution, width = 6, height = 4, dpi = 300) #nolint
+
+opp_blockdistributiondata <- data.frame(
+    category = c("Zone 2", "Zone 3", "Zone 4"), #nolint
+    count = c(opponent_scores$block_zone2, opponent_scores$block_zone3, opponent_scores$block_zone4) #nolint
+)
+opp_blockdistributiondata$label <- opp_blockdistributiondata$count
+
+opp_block_distribution <- ggplot(opp_blockdistributiondata, aes(x = "", y = count, fill = category)) + #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+ggsave("plot_opp_block.png", plot = opp_block_distribution, width = 6, height = 4, dpi = 300) #nolint
+
+
+opponent_france_error_data <- data.frame(
+    category = c("Error Zone 1", "Error Zone 2", "Error Zone 3", "Error Zone 4", #nolint
+                "Error Zone 6", "Service Error", "Error Net Touch"), #nolint
+    count = c(opponent_scores$error_zone1, opponent_scores$error_zone2, opponent_scores$error_zone3, #nolint
+            opponent_scores$error_zone4, opponent_scores$error_zone6, opponent_scores$serve_error, opponent_scores$error_net_touch) #nolint
+)
+opponent_france_error_data$label <- opponent_france_error_data$count
+
+opp_error_distribution <- ggplot(opponent_france_error_data, aes(x = "", y = count, fill = category)) + #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+ggsave("plot_opp_error.png", plot = opp_error_distribution, width = 6, height = 4, dpi = 300) #nolint
