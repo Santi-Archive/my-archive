@@ -1,0 +1,182 @@
+match_id,set,rally_number,scoring_team,conceding_team,score_type,player_score
+2024_VNL_FRA_vs_NED,1,1,France,Netherlands,attack_zone4,Louati
+2024_VNL_FRA_vs_NED,1,2,France,Netherlands,error_zone2,NA
+2024_VNL_FRA_vs_NED,1,3,France,Netherlands,attack_zone2,Patry
+2024_VNL_FRA_vs_NED,1,4,France,Netherlands,block_zone4,Louati
+2024_VNL_FRA_vs_NED,1,5,Netherlands,France,attack_zone2,Nimir
+2024_VNL_FRA_vs_NED,1,6,France,Netherlands,attack_zone3,Seddik
+2024_VNL_FRA_vs_NED,1,7,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,1,8,Netherlands,France,attack_zone6,Van Garderen
+2024_VNL_FRA_vs_NED,1,9,France,Netherlands,attack_zone2,Patry
+2024_VNL_FRA_vs_NED,1,10,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,1,11,France,Netherlands,attack_zone2,Patry
+2024_VNL_FRA_vs_NED,1,12,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,1,13,France,Netherlands,attack_zone1,Patry
+2024_VNL_FRA_vs_NED,1,14,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,1,15,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,1,16,Netherlands,France,attack_zone2,Nimir
+2024_VNL_FRA_vs_NED,1,17,France,Netherlands,attack_zone1,Patry
+2024_VNL_FRA_vs_NED,1,18,France,Netherlands,attack_zone3,Seddik
+2024_VNL_FRA_vs_NED,1,19,Netherlands,France,attack_zone4,Koops
+2024_VNL_FRA_vs_NED,1,20,Netherlands,France,serve_ace,Plak
+2024_VNL_FRA_vs_NED,1,21,France,Netherlands,attack_zone2,Louati
+2024_VNL_FRA_vs_NED,1,22,France,Netherlands,block_zone3,Seddik
+2024_VNL_FRA_vs_NED,1,23,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,1,24,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,1,25,Netherlands,France,attack_zone6,Van Garderen
+2024_VNL_FRA_vs_NED,1,26,France,Netherlands,block_zone4,Clevenot
+2024_VNL_FRA_vs_NED,1,27,France,Netherlands,serve_ace,Patry
+2024_VNL_FRA_vs_NED,1,28,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,1,29,Netherlands,France,error_zone6,NA
+2024_VNL_FRA_vs_NED,1,30,France,Netherlands,error_zone1,NA
+2024_VNL_FRA_vs_NED,1,31,Netherlands,France,error_zone1,NA
+2024_VNL_FRA_vs_NED,1,32,Netherlands,France,block_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,1,33,France,Netherlands,attack_zone1,Patry
+2024_VNL_FRA_vs_NED,1,34,Netherlands,France,attack_zone3,Plak
+2024_VNL_FRA_vs_NED,1,35,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,1,36,France,Netherlands,serve_ace,Toniutti
+2024_VNL_FRA_vs_NED,1,37,France,Netherlands,block_zone4,Louati
+2024_VNL_FRA_vs_NED,1,38,Netherlands,France,attack_zone3,Plak
+2024_VNL_FRA_vs_NED,1,39,France,Netherlands,error_zone2,NA
+2024_VNL_FRA_vs_NED,1,40,France,Netherlands,attack_zone4,Clevenot
+2024_VNL_FRA_vs_NED,1,41,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,1,42,France,Netherlands,attack_zone3,Seddik
+2024_VNL_FRA_vs_NED,1,43,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,1,44,Netherlands,France,block_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,1,45,France,Netherlands,error_zone4,NA
+2024_VNL_FRA_vs_NED,2,1,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,2,2,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,2,3,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,2,4,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,2,5,France,Netherlands,attack_zone3,Seddik
+2024_VNL_FRA_vs_NED,2,6,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,2,7,Netherlands,France,error_zone3,NA
+2024_VNL_FRA_vs_NED,2,8,France,Netherlands,attack_zone3,Le Goff
+2024_VNL_FRA_vs_NED,2,9,Netherlands,France,attack_zone2,Nimir
+2024_VNL_FRA_vs_NED,2,10,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,2,11,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,2,12,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,2,13,France,Netherlands,attack_zone1,Patry
+2024_VNL_FRA_vs_NED,2,14,France,Netherlands,attack_zone6,Clevenot
+2024_VNL_FRA_vs_NED,2,15,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,2,16,France,Netherlands,serve_error, NA
+2024_VNL_FRA_vs_NED,2,17,France,Netherlands,serve_ace,Toniutti
+2024_VNL_FRA_vs_NED,2,18,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,2,19,Netherlands,France,error_zone2,NA
+2024_VNL_FRA_vs_NED,2,20,France,Netherlands,attack_zone6,Clevenot
+2024_VNL_FRA_vs_NED,2,21,France,Netherlands,attack_zone4,Clevenot
+2024_VNL_FRA_vs_NED,2,22,Netherlands,France,attack_zone3,Plak
+2024_VNL_FRA_vs_NED,2,23,Netherlands,France,block_zone4,Plak
+2024_VNL_FRA_vs_NED,2,24,France,Netherlands,block_zone4,Clevenot
+2024_VNL_FRA_vs_NED,2,25,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,2,26,Netherlands,France,attack_zone3,Plak
+2024_VNL_FRA_vs_NED,2,27,France,Netherlands,attack_zone6,Louati
+2024_VNL_FRA_vs_NED,2,28,Netherlands,France,attack_zone2,Nimir
+2024_VNL_FRA_vs_NED,2,29,Netherlands,France,serve_ace,Plak
+2024_VNL_FRA_vs_NED,2,30,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,2,31,France,Netherlands,block_zone4,Le Goff
+2024_VNL_FRA_vs_NED,2,32,Netherlands,France,attack_zone2,Ter Maat
+2024_VNL_FRA_vs_NED,2,33,Netherlands,France,error_zone1,NA
+2024_VNL_FRA_vs_NED,2,34,Netherlands,France,attack_zone6,Van Garderen
+2024_VNL_FRA_vs_NED,2,35,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,2,36,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,2,37,Netherlands,France,error_zone1,NA
+2024_VNL_FRA_vs_NED,2,38,France,Netherlands,attack_zone4,Tillie
+2024_VNL_FRA_vs_NED,2,39,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,2,40,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,2,41,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,2,42,France,Netherlands,attack_zone3,Seddik
+2024_VNL_FRA_vs_NED,2,43,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,2,44,France,Netherlands,attack_zone2,Patry
+2024_VNL_FRA_vs_NED,2,45,Netherlands,France,attack_zone2,Ter Maat
+2024_VNL_FRA_vs_NED,3,1,France,Netherlands,attack_zone4,Louati
+2024_VNL_FRA_vs_NED,3,2,France,Netherlands,attack_zone2,Patry
+2024_VNL_FRA_vs_NED,3,3,France,Netherlands,attack_zone4,Louati
+2024_VNL_FRA_vs_NED,3,4,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,3,5,France,Netherlands,attack_zone3,Seddik
+2024_VNL_FRA_vs_NED,3,6,Netherlands,France,attack_zone1,Ter Maat
+2024_VNL_FRA_vs_NED,3,7,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,3,8,France,Netherlands,attack_zone2,Ter Maat
+2024_VNL_FRA_vs_NED,3,9,France,Netherlands,attack_zone4,Clevenot
+2024_VNL_FRA_vs_NED,3,10,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,3,11,France,Netherlands,attack_zone4,Clevenot
+2024_VNL_FRA_vs_NED,3,12,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,3,13,Netherlands,Franec,serve_ace,Ter Maat
+2024_VNL_FRA_vs_NED,3,14,France,Netherlands,attack_zone4,Louati
+2024_VNL_FRA_vs_NED,3,15,France,Netherlands,error_zone1,NA
+2024_VNL_FRA_vs_NED,3,16,Netherlands,France,attack_zone6,Van Garderen
+2024_VNL_FRA_vs_NED,3,17,Netherlands,France,attack_zone1,Ter Maat
+2024_VNL_FRA_vs_NED,3,18,France,Netherlands,error_net_touch,NA
+2024_VNL_FRA_vs_NED,3,19,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,3,20,France,Netherlands,attack_zone6,Clevenot
+2024_VNL_FRA_vs_NED,3,21,France,Netherlands,attack_zone2,Patry
+2024_VNL_FRA_vs_NED,3,22,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,3,23,France,Netherlands,attack_zone4,Clevenot
+2024_VNL_FRA_vs_NED,3,24,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,3,25,Netherlands,France,attack_zone4,Jorna
+2024_VNL_FRA_vs_NED,3,26,France,Netherlands,attack_zone4,Clevenot
+2024_VNL_FRA_vs_NED,3,27,France,Netherlands,error_zone2,NA
+2024_VNL_FRA_vs_NED,3,28,Netherlands,France,attack_zone2,Ter Maat
+2024_VNL_FRA_vs_NED,3,29,Netherlands,France,attack_zone4,Jorna
+2024_VNL_FRA_vs_NED,3,30,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,3,31,Netherlands,France,error_net_touch,NA
+2024_VNL_FRA_vs_NED,3,32,France,Netherlands,attack_zone4,Louati
+2024_VNL_FRA_vs_NED,3,33,France,Netherlands,block_zone3,Seddik
+2024_VNL_FRA_vs_NED,3,34,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,3,35,France,Netherlands,attack_zone3,Seddik
+2024_VNL_FRA_vs_NED,3,36,France,Netherlands,block_zone2,Seddik
+2024_VNL_FRA_vs_NED,3,37,Netherlands,France,attack_zone1,Ter Maat
+2024_VNL_FRA_vs_NED,3,38,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,3,39,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,3,40,Netherlands,France,block_zone4,Plak
+2024_VNL_FRA_vs_NED,3,41,France,Netherlands,error_lift,NA
+2024_VNL_FRA_vs_NED,3,42,France,Netherlands,error_zone4,NA
+2024_VNL_FRA_vs_NED,3,43,France,Netherlands,block_zone2,Le Goff
+2024_VNL_FRA_vs_NED,3,44,France,Netherlands,attack_zone3,Le Goff
+2024_VNL_FRA_vs_NED,4,1,France,Netherlands,block_zone4,Seddik
+2024_VNL_FRA_vs_NED,4,2,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,4,3,France,Netherlands,attack_zone4,Clevenot
+2024_VNL_FRA_vs_NED,4,4,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,4,5,France,Netherlands,attack_zone4,Clevenot
+2024_VNL_FRA_vs_NED,4,6,France,Netherlands,block_zone2,Le Goff
+2024_VNL_FRA_vs_NED,4,7,Netherlands,France,error_net_touch,NA
+2024_VNL_FRA_vs_NED,4,8,France,Netherlands,attack_zone1,Patry
+2024_VNL_FRA_vs_NED,4,9,France,Netherlands,attack_zone2,Le Goff
+2024_VNL_FRA_vs_NED,4,10,Netherlands,Fran,attack_zone2,Ter Maat
+2024_VNL_FRA_vs_NED,4,11,France,Netherlands,attack_zone1,Patry
+2024_VNL_FRA_vs_NED,4,12,France,Netherlands,block_zone2,Seddik
+2024_VNL_FRA_vs_NED,4,13,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,4,14,France,Netherlands,attack_zone6,Clevenot
+2024_VNL_FRA_vs_NED,4,15,France,Netherlands,error_zone4,NA
+2024_VNL_FRA_vs_NED,4,16,France,Netherlands,attack_zone4,Louati
+2024_VNL_FRA_vs_NED,4,17,France,Netherlands,serve_ace,Toniutti
+2024_VNL_FRA_vs_NED,4,18,Netherlands,France,attack_zone4,Ahyi
+2024_VNL_FRA_vs_NED,4,19,France,Netherlands,error_zone3,NA
+2024_VNL_FRA_vs_NED,4,20,Netherlands,Fran,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,4,21,France,Netherlands,attack_zone2,Patry
+2024_VNL_FRA_vs_NED,4,22,Netherlands,France,attack_zone2,Ahyi
+2024_VNL_FRA_vs_NED,4,23,Netherlands,France,attack_zone1,Ahyi
+2024_VNL_FRA_vs_NED,4,24,Netherlands,France,error_zone6,NA
+2024_VNL_FRA_vs_NED,4,25,Netherlands,France,block_zone2,Plak
+2024_VNL_FRA_vs_NED,4,26,Netherlands,France,attack_zone1,Ahyi
+2024_VNL_FRA_vs_NED,4,27,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,4,28,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,4,29,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,4,30,Netherlands,France,attack_zone1,Ahyi
+2024_VNL_FRA_vs_NED,4,31,Netherlands,France,attack_zone3,Parkinson
+2024_VNL_FRA_vs_NED,4,32,France,Netherlands,serve_error,NA
+2024_VNL_FRA_vs_NED,4,33,Netherlands,France,error_zone4,NA
+2024_VNL_FRA_vs_NED,4,34,France,Netherlands,attack_zone2,Faure
+2024_VNL_FRA_vs_NED,4,35,France,Netherlands,block_zone2,Seddik
+2024_VNL_FRA_vs_NED,4,36,France,Netherlands,error_zone6,NA
+2024_VNL_FRA_vs_NED,4,37,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,4,38,France,Netherlands,attack_zone4,Louati
+2024_VNL_FRA_vs_NED,4,39,Netherlands,France,attack_zone4,Van Garderen
+2024_VNL_FRA_vs_NED,4,40,France,Netherlands,attack_zone4,Clevenot
+2024_VNL_FRA_vs_NED,4,41,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,4,42,France,Netherlands,attack_zone3,Clevenot
+2024_VNL_FRA_vs_NED,4,43,Netherlands,France,attack_zone1,Ahyi
+2024_VNL_FRA_vs_NED,4,44,France,Netherlands,attack_zone6,Louati
+2024_VNL_FRA_vs_NED,4,45,Netherlands,France,serve_error,NA
+2024_VNL_FRA_vs_NED,4,46,Netherlands,France,serve_ace,Plak
+2024_VNL_FRA_vs_NED,4,47,France,Netherlands,attack_zone1,Patry

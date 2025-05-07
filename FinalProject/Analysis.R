@@ -8,8 +8,10 @@ data1 <- read_csv("FinalProject/France/2024_VNL_BUL_vs_FRA.csv")
 data2 <- read_csv("FinalProject/France/2024_VNL_SLO_vs_FRA.csv")
 data3 <- read_csv("FinalProject/France/2024_VNL_FRA_vs_USA.csv")
 data4 <- read_csv("FinalProject/France/2024_VNL_TUR_vs_FRA.csv")
+data5 <- read_csv("FinalProject/France/2024_VNL_FRA_vs_ITA.csv")
+data6 <- read_csv("FinalProject/France/2024_VNL_FRA_vs_NED.csv")
 
-combined_data <- bind_rows(data1, data2, data3, data4)
+combined_data <- bind_rows(data1, data2, data3, data4, data5, data6)
 
 france_all_score <- combined_data %>%
     filter(scoring_team == "France") %>% #nolint
