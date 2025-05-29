@@ -36,7 +36,9 @@ france_zonedistribution_data <- data.frame(
 france_zonedistribution_data$label <- france_zonedistribution_data$count
 # Distribution of France attack in zone 1 to 6
 france_zone_distribution <- ggplot(france_zonedistribution_data, aes(x = "", y = count, fill = category)) + #nolint
-    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), #nolint
+    position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + #nolint
+    theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
 
 ggsave("plot_zone.png", plot = france_zone_distribution, width = 6, height = 4, dpi = 300) #nolint
 
@@ -49,7 +51,9 @@ france_blockdistribution_data <- data.frame(
 france_blockdistribution_data$label <- france_blockdistribution_data$count
 # Distribution of France block in zone 2 to 4
 france_block_distribution <- ggplot(france_blockdistribution_data, aes(x = "", y = count, fill = category)) + #nolint
-    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
+    geom_bar(stat = "identity", width = 1) + coord_polar(theta = "y") + geom_text(aes(label = label), #nolint
+    position = position_stack(vjust = 0.5), color = "black", size = 4) + theme_void() + #nolint
+    theme(legend.title = element_blank()) + theme(plot.background = element_rect(fill = "white", color = "white")) #nolint
 
 ggsave("plot_block.png", plot = france_block_distribution, width = 6, height = 4, dpi = 300) #nolint
 
@@ -188,10 +192,8 @@ zone_plot <- ggplot(zone_distribution, aes(x = score_type, y = percentage, fill 
        fill = "Player") +
   theme_minimal()
 
-# Save with white background
 ggsave("zone_player_distribution_labeled.png", plot = zone_plot, 
        width = 10, height = 6, dpi = 300, bg = "white")
-
 
 france_data <- combined_data %>%
   filter(scoring_team == "France")
